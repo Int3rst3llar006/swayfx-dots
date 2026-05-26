@@ -1,0 +1,21 @@
+width=400
+height=250
+
+#window {
+    margin: 0px;
+    border: 2px solid --wofi-color1; /* Uses Pywal's color1 as border */
+    border-radius: 5px;
+    background-color: --wofi-color0;  /* Uses Pywal's color0 as background */
+}
+
+#entry {
+    background-color: --wofi-color0;
+}
+
+#text {
+    color: --wofi-color15;          /* Uses Pywal's color15 as foreground text */
+}
+
+#entry:selected {
+    background-color: --wofi-color4;  /* Uses Pywal's color4 for highlights */
+}

@@ -1,0 +1,65 @@
+@import "/home/t540p/.cache/wal/colors-waybar.css";
+
+* {
+    border: none;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Background of the main bar */
+window#waybar {
+    background: transparent;
+}
+
+/* Left Pod */
+.modules-left {
+    background-color: #2E3440; /* Nord theme dark background */
+    border-radius: 15px;
+    margin: 5px 5px 5px 10px;
+    padding: 0 10px;
+}
+
+/* Center Pod */
+.modules-center {
+    background-color: #2E3440;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 0 15px;
+}
+
+/* Right Pod */
+.modules-right {
+    background-color: #2E3440;
+    border-radius: 15px;
+    margin: 5px 10px 5px 5px;
+    padding: 0 10px;
+}
+
+/* --- Module Styling --- */
+#workspaces button {
+    color: #821e2f;
+    padding: 0 5px;
+    background: transparent;
+}
+
+#workspaces button.focused {
+    color: #d15267;
+}
+
+#clock {
+    color: #c7c7c7;
+}
+
+#pulseaudio {
+    color: #821e52;
+}
+
+#battery {
+    color: #ab3e69;
+}
+
+#network {
+    color: #e65776;
+}
+

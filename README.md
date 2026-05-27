@@ -2,6 +2,8 @@ swayfx-dots
 
 a simple script that installs my dotfiles onto Arch
 
+to install run ./install
+
 NOTE: you will have to do these things after installation. 
 . change the ZSH_THEME variable to powerlevel10k
 . change the config2 and style.css2 back to config and style.css in wofi directory

@@ -18,7 +18,4 @@ mv config .config/wofi/config
 mv .config/wofi/style.css .config/wofi/backup-style.css
 mv config2 .config/wofi
 mv style.css2 .config/wofi
-wal -i swayfx-dotfiles/aesthetic-computer-4k.
-figlet INSTALLATION COMPLETE.
-echo "To get powerlevel10k working correctly, change the ZSH-THEME variable in .zshrc to powerlevel10k.
-configure everything however you like! make sure you make pywal16 start when a terminal wndow is opened" 
+wal -i swayfx-dotfiles/aesthetic-computer-4k.jpg

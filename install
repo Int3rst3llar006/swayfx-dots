@@ -1,14 +1,17 @@
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd
-sudo pacman -Sy zsh ly alacritty waybar ranger cmatrix vim cava pcmanfm wofi fastfetch && yay -Sy python-pywal16 swayfx
+sudo emerge eselect-repository
+sudo eselect repository enable guru
+sudo emaint sync -r guru
+sudo eselect repository enable gentoo-zh
+sudo emaint sync -r gentoo-zh
+sudo mkdir -p /etc/portage/package.accept_keywords
+echo "gui-wm/swayfx -amd64" | sudo tee -a /etc/portage/package.accept_keywords/swayfx
+sudo emerge zsh ly alacritty waybar ranger cmatrix vim cava pcmanfm wofi fastfetch python-pywal16 swayfx curl zsh-theme-powerlevel10k
+sudo systemctl enable ly
 sudo mv /etc/xdg/waybar/config.jsonc /etc/xdg/waybar/backup-config.jsonc
 sudo mv /etc/xdg/waybar/style.css /etc/xdg/waybar/backup-style.css
 sudo cp -r /etc/sway .config
 chsh /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-yay -Sy zsh-theme-powerlevel10k
 mv config.jsonc /etc/xdg/waybar
 mv style.css /etc/xdg/waybar
 mv /etc/sway/config /etc/sway/backup-config
@@ -19,3 +22,5 @@ mv .config/wofi/style.css .config/wofi/backup-style.css
 mv config2 .config/wofi
 mv style.css2 .config/wofi
 wal -i swayfx-dotfiles/aesthetic-computer-4k.jpg
+echo "To get powerlevel10k working correctly, change the ZSH-THEME variable in .zshrc to powerlevel10k.
+configure everything however you like! make sure you make pywal16 start when a terminal wndow is opened" 
